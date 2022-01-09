@@ -1,11 +1,10 @@
 import requests
 from os import system, name
 from subprocess import run
-import threading
 from time import sleep
 from colorama import init
 from termcolor import colored
-import random
+import random , requests , threading
 init()
 
 def asciart():
@@ -51,7 +50,7 @@ def download_file(url):
     dl = True
     return local_filename
 
-url = input("Enter Link: ")
+url = input("Enter your download link: ")
 if sys:
     run(["notify-send","[INFO]: Download Started."])
 print("[INFO]: Download Started.")
